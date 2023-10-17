@@ -1,0 +1,67 @@
+/* Estilo para o corpo da página */
+body {
+    font-family: 'Raleway', sans-serif; /* Fonte desejada */
+    background-color: #e8a4b4; /* Cor de fundo base */
+    margin-left: 0;
+    padding: 0;
+    text-align: center;
+    color: #fff; /* Cor do texto */
+}
+
+/* Estilo para o título da página */
+h1 {
+    color: #333;
+    font-family: 'Raleway', sans-serif; /* Fonte desejada */
+}
+
+/* Estilo para o formulário */
+form {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    padding-left: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Raleway', sans-serif; /* Fonte desejada */
+}
+
+/* Estilo para os rótulos do formulário */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333; /* Cor do texto dos rótulos */
+}
+
+/* Estilo para os campos de entrada do formulário */
+input {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Raleway', sans-serif; /* Fonte desejada */
+}
+
+/* Estilo para o botão de gerar mensagem */
+button {
+    background-color: #0073e6;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif; /* Fonte desejada */
+}
+
+/* Estilo para a div que exibe a mensagem gerada */
+#mensagemGerada {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #333; /* Cor do texto da mensagem gerada */
+    font-family: 'Raleway', sans-serif;
+}

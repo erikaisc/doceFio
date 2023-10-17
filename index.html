@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Envio de Mensagem de Entrega</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <h1>Envio de Mensagem de Entrega</h1>
+
+    <form id="mensagemForm">
+        <label for="cliente">Nome do Cliente:</label>
+        <input type="text" id="cliente" required><br>
+
+        <label for="transportadora">Transportadora:</label>
+        <input type="text" id="transportadora" required><br>
+
+        <label for="codigoRastreamento">Código de Rastreamento:</label>
+        <input type="text" id="codigoRastreamento" required><br>
+
+        <label for="prazoEntrega">Previsão de Entrega:</label>
+        <input type="text" id="prazoEntrega" required><br>
+
+        <label for="linkRastreamento">Link de Rastreamento:</label>
+        <input type="text" id="linkRastreamento" required><br>
+
+        <label for="telefone">Número de Telefone:</label>
+        <input type="text" id="telefone" required><br>
+
+
+        <button type="button" onclick="gerarMensagem()">Gerar Mensagem</button>
+        <p><a id="linkWhatsApp" target="_blank">Clique aqui para enviar a mensagem via WhatsApp</a></p>
+
+    </form>
+
+    <div id="mensagemGerada" style="white-space: pre-wrap;">
+
+        <script>
+            function gerarMensagem() {
+                const cliente = document.getElementById("cliente").value;
+                const transportadora = document.getElementById("transportadora").value;
+                const codigoRastreamento = document.getElementById("codigoRastreamento").value;
+                const prazoEntrega = document.getElementById("prazoEntrega").value;
+                const linkRastreamento = document.getElementById("linkRastreamento").value;
+                const telefone = document.getElementById("telefone").value;
+            
+                const mensagem = `
+Olá, ${cliente}🌟
+            
+Eba! Temos ótimas notícias para você: Seu pedido foi enviado com muito carinho e já está a caminho! 🚚✨
+            
+Para que você possa acompanhar sua encomenda com facilidade, aqui estão os detalhes:
+            
+Transportadora: ${transportadora}
+Código de Rastreamento: ${codigoRastreamento}
+Previsão de Entrega: ${prazoEntrega}
+Link de Rastramento: {linkRastreamento}
+            
+Estamos empolgados para que você receba seus produtos em breve. Se tiver alguma dúvida ou precisar de assistência, estamos sempre aqui para ajudar. 😊
+            
+Tenha um dia maravilhoso e até logo!
+            
+Equipe Doce Fio Bordados`;
+            
+                // Gerar o link para enviar uma mensagem via WhatsApp
+                const mensagemWhatsApp = encodeURIComponent(mensagem);
+                const linkWhatsApp = `https://web.whatsapp.com/send?phone=${telefone}&text=${mensagemWhatsApp}`;
+                
+                document.getElementById("mensagemGerada").textContent = mensagem;
+                document.getElementById("linkWhatsApp").setAttribute("href", linkWhatsApp);
+            }
+
+
+            </script>
+</body>
+</html>
